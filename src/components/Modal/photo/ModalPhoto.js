@@ -12,9 +12,8 @@ export const ModalPhoto = ({openCloseModalPhoto, src}) => {
     }
     return (
         <div className={s.modal_overlay} data-close={"true"} onClick={closeModalPhoto}>
-            <div className={s.modal}>
-                <div>
-                    <img src={src} alt=""/>
+                <div className={s.left}>
+                    <img src={src} alt="#" className={s.img}/>
                 </div>
                 <div className={s.right}>
                     <div>
@@ -124,7 +123,6 @@ export const ModalPhoto = ({openCloseModalPhoto, src}) => {
                         <button>Опубликовать</button>
                     </div>
                 </div>
-            </div>
             <div className={s.x} data-close={"true"}>&times;</div>
         </div>
     )

@@ -5,6 +5,10 @@
     left: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
 }
 .x {
     font-size: 60px;
@@ -14,31 +18,39 @@
     right: 50px;
     cursor: pointer;
 }
+.x:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+
 .hr {
     width: 398px;
     background: rgba(180, 183, 185, .1);
     border: 1px solid rgba(180, 183, 185, .5);
 }
 /**************************************************/
-.modal {
-    width: 1300px;
-    height: 506px;
-    margin: 80px auto;
-    font-family: Roboto;
-    font-size: 18px;
-    background: white;
-    display: flex;
 
+.left {
+    width: 900px;
+    height: 516px;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 516px;
 }
-.modal img {
+
+
+.img {
+    vertical-align: middle;
     max-width: 900px;
     max-height: 506px;
-
 }
 
-/*.right {*/
-/*    width: 400px;*/
-/*}*/
+.right {
+    width: 400px;
+    height: 516px;
+    background: white;
+}
 /**************************************************/
 .author {
     font-size: 16px;
