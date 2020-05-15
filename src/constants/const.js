@@ -1,0 +1,5 @@
+export const INPUT_AUTH = "INPUT_AUTH"
+export const OUTPUT_AUTH = "OUTPUT_AUTH"
+export const OPEN_CLOSE_MODAL_AUTH = "OPEN_CLOSE_MODAL_AUTH"
+export const OPEN_CLOSE_MODAL_PHOTO = "OPEN_CLOSE_MODAL_PHOTO"
+export const SET_DATA = "SET_DATA"

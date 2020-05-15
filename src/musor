@@ -1,0 +1,40 @@
+   // const [img, setImg] = useState({})
+    // const photos = [
+    //     {id: 1, url: "https://i.pinimg.com/originals/c4/45/64/c445643de29c33a642fa68af2649d35d.jpg"},
+    //     {id: 2, url: "https://naekvatoreir.ru/sites/default/files/tropiki-more-plyaj-peyzaji_0.jpg"},
+    //     {id: 3, url: "https://naekvatoreir.ru/sites/default/files/tropiki-more-plyaj-peyzaji_0.jpg"},
+    //     {id: 4, url: "https://www.sunhome.ru/i/wallpapers/111/biryuzovii-okean-v2.orig.jpg"},
+    //     {id: 5, url: "https://img2.goodfon.ru/original/2112x1188/4/ed/tropiki-solnce-more-poberezhe.jpg"},
+    //     {id: 6, url: "https://wallbox.ru/resize/1920x1080/wallpapers/main/201111/06a82f7ecba21decbd327b0e5c0739df.jpg"},
+    //     {id: 7, url: "https://img2.goodfon.com/original/2560x1440/6/6c/maldivy-nebo-more-pesok-3899.jpg"},
+    //     {id: 8, url: "https://wallpaperscave.com.ua/images/original/18/06-21/earth-beach-59914.jpg"},
+    //     {id: 9, url: "https://wallbox.ru/resize/2560x1440/wallpapers/main/201329/e0a2b94e0654f4a.jpg"},
+    //     {id: 10, url: "https://cdn.wallpapersafari.com/9/66/dWilTS.jpg"},
+    //     {id: 11, url: "https://i.pinimg.com/originals/c4/45/64/c445643de29c33a642fa68af2649d35d.jpg"},
+    //     {id: 12, url: "https://naekvatoreir.ru/sites/default/files/tropiki-more-plyaj-peyzaji_0.jpg"},
+    //     {id: 13, url: "https://naekvatoreir.ru/sites/default/files/tropiki-more-plyaj-peyzaji_0.jpg"},
+    //     {id: 14, url: "https://www.sunhome.ru/i/wallpapers/111/biryuzovii-okean-v2.orig.jpg"},
+    //     {id: 15, url: "https://img2.goodfon.ru/original/2112x1188/4/ed/tropiki-solnce-more-poberezhe.jpg"},
+    //     {id: 16, url: "https://wallbox.ru/resize/1920x1080/wallpapers/main/201111/06a82f7ecba21decbd327b0e5c0739df.jpg"},
+    //     {id: 17, url: "https://img2.goodfon.com/original/2560x1440/6/6c/maldivy-nebo-more-pesok-3899.jpg"},
+    //     {id: 18, url: "https://wallpaperscave.com.ua/images/original/18/06-21/earth-beach-59914.jpg"},
+    //     {id: 19, url: "https://wallbox.ru/resize/2560x1440/wallpapers/main/201329/e0a2b94e0654f4a.jpg"},
+    //     {id: 20, url: "https://cdn.wallpapersafari.com/9/66/dWilTS.jpg"},
+    //     {id: 21, url: "https://i.pinimg.com/originals/c4/45/64/c445643de29c33a642fa68af2649d35d.jpg"},
+    //     {id: 22, url: "https://naekvatoreir.ru/sites/default/files/tropiki-more-plyaj-peyzaji_0.jpg"},
+    //     {id: 23, url: "https://naekvatoreir.ru/sites/default/files/tropiki-more-plyaj-peyzaji_0.jpg"},
+    //     {id: 24, url: "https://www.sunhome.ru/i/wallpapers/111/biryuzovii-okean-v2.orig.jpg"},
+    //     {id: 25, url: "https://img2.goodfon.ru/original/2112x1188/4/ed/tropiki-solnce-more-poberezhe.jpg"},
+    //     {id: 26, url: "https://wallbox.ru/resize/1920x1080/wallpapers/main/201111/06a82f7ecba21decbd327b0e5c0739df.jpg"},
+    //     {id: 27, url: "https://img2.goodfon.com/original/2560x1440/6/6c/maldivy-nebo-more-pesok-3899.jpg"},
+    //     {id: 28, url: "https://wallpaperscave.com.ua/images/original/18/06-21/earth-beach-59914.jpg"},
+    //     {id: 29, url: "https://wallbox.ru/resize/2560x1440/wallpapers/main/201329/e0a2b94e0654f4a.jpg"},
+    //     {id: 30, url: "https://cdn.wallpapersafari.com/9/66/dWilTS.jpg"},
+    // ]
+
+        // axiosGet()
+        //     .then((response) => setImg(response.data))
+
+        {/*       <div className={s.main}>
+                        {Object.values(img).map(photo => <img src={photo.url} key={photo.date} onClick={openModalPhoto} /> )}
+                    </div>*/}

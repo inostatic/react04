@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3924c6c4-f77e-420f-94f7-7a254a18bc24" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1bZr6qa4MA7UcmrtYTDhkevKQVJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/OSPanel/domains/testReact" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project\project-react\react04\src\components\Modal\auth" />
+      <recent name="C:\project\project-react\react04\src\reducers" />
+      <recent name="C:\project\project-react\react04\src\store" />
+      <recent name="C:\project\project-react\react04\src\components\Main" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3924c6c4-f77e-420f-94f7-7a254a18bc24" name="Default Changelist" comment="" />
+      <created>1588850284025</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588850284025</updated>
+      <workItem from="1588850286494" duration="22853000" />
+      <workItem from="1589048203029" duration="19958000" />
+      <workItem from="1589147966477" duration="22000" />
+      <workItem from="1589201416290" duration="942000" />
+      <workItem from="1589304903053" duration="825000" />
+      <workItem from="1589309306642" duration="43730000" />
+      <workItem from="1589455482325" duration="30625000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="736" y="328" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589574816358">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="736" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1589574816358" />
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588853451563">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588853451563" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1589480530178">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1589480530178" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1589392974943">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1589392974943" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588859220512">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1588859220512" />
+  </component>
+</project>
