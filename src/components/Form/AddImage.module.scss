@@ -1,0 +1,20 @@
+.form {
+    width: 1300px;
+    margin: 0 auto;
+    padding-top: 100px;
+    .block {
+        margin: 0 auto;
+        text-align: center;
+        .input {
+            width: 600px;
+            height: 25px;
+        }
+        .btn {
+            height: 31px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+

@@ -1,5 +1,5 @@
 import React from "react"
-import s from "./navbar.module.css"
+import s from "./navbar.module.scss"
 import {NavLink} from "react-router-dom";
 import {ModalAuth} from "../Modal/auth/ModalAuth";
 import {openCloseModalAuth, renderAfterInputAuth, renderAfterOutputAuth} from "../../actions/actions";

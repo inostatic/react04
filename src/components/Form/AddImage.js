@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import s from './AddImage.module.css'
+import s from './AddImage.module.scss'
 import {axiosPost} from "../../API/API";
 
 export const AddImage = ({getImageThunkCreator}) => {

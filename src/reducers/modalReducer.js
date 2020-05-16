@@ -3,7 +3,6 @@ import {OPEN_CLOSE_MODAL_AUTH, OPEN_CLOSE_MODAL_PHOTO} from "../constants/const"
 let initState = {
     modalAuth: false,
     modalPhoto: false,
-    idModalPhoto: null
 }
 
 export const modalReducer = (state = initState, action) => {
@@ -15,8 +14,7 @@ export const modalReducer = (state = initState, action) => {
     }  else if (action.type === OPEN_CLOSE_MODAL_PHOTO) {
         return {
             ...state,
-            modalPhoto: !state.modalPhoto,
-            idModalPhoto: action.id
+            modalPhoto: !state.modalPhoto
         }
     }
     return state

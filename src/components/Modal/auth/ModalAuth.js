@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import s from './ModalAuth.module.css'
+import s from './modalAuth.module.scss'
 import {authWithEmailAndPassword} from "../../../API/auth";
 
 
