@@ -2,32 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3924c6c4-f77e-420f-94f7-7a254a18bc24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/Auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth/auth.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/AddImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/AddImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/AddImage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/AddImage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/main.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/auth/ModalAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/auth/ModalAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/auth/ModalAuth.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/auth/modalAuth.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/Modal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/modalPhoto.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/navbar.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/profile.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/dataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/dataReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/modalReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/modalReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/modalPhoto.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/modalPhoto.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/navbar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/musor" beforeDir="false" afterPath="$PROJECT_DIR$/src/musor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskboard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/taskboard.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +57,8 @@
       <workItem from="1589304903053" duration="825000" />
       <workItem from="1589309306642" duration="43730000" />
       <workItem from="1589455482325" duration="35259000" />
-      <workItem from="1589631856819" duration="17917000" />
+      <workItem from="1589631856819" duration="38657000" />
+      <workItem from="1589732213970" duration="636000" />
     </task>
     <servers />
   </component>
