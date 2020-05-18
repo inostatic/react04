@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {getImageThunkCreator, openCloseModalPhoto} from "../../actions/actions";
 import {ModalPhoto} from "../Modal/photo/ModalPhoto";
 import {AddImage} from "../Form/AddImage";
+import {createUserWithEmailAndPassword} from "../../API/auth";
 
 
 const Main = ({modalPhoto, auth, images, openCloseModalPhoto, getImageThunkCreator}) => {

@@ -1,24 +1,31 @@
-import axios from "axios";
+
+import firebase from "firebase";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDCSsOs0VlOGEYNktXGOIoa9_wnEJ2j8eM",
+    authDomain: "react04-1e54b.firebaseapp.com",
+    databaseURL: "https://react04-1e54b.firebaseio.com",
+    projectId: "react04-1e54b",
+    storageBucket: "react04-1e54b.appspot.com",
+    messagingSenderId: "970165524884",
+    appId: "1:970165524884:web:da7e9e17e10824e48a9781"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+
 
 export function authWithEmailAndPassword(email, password) {
-    const API_KEY = "AIzaSyDCSsOs0VlOGEYNktXGOIoa9_wnEJ2j8eM"
-    if (!email || !password) {
-        return Promise.resolve(null)
+    return firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(response => response.user.uid)
+        .catch(error => console.log(error))
+}
 
-    }
-    return axios({
-        method: "POST",
-        url: `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,
-        data: JSON.stringify({
-            email, password,
-            returnSecureToken: true
-        }),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    }).then(response => response.data)
-        .then(data => data.idToken)
 
+export const createUserWithEmailAndPassword = (email, password) => {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(error => {
+        console.log(error)
+    });
 }
 
 
@@ -34,31 +41,3 @@ export function authWithEmailAndPassword(email, password) {
 
 
 
-
-
-
-
-
-
-// const renderAfterAuth = (content) => {
-//     return content
-// }
-
-
-
-
-// export function authWithEmailAndPassword(email, password) {
-//     const API_KEY = "AIzaSyDCSsOs0VlOGEYNktXGOIoa9_wnEJ2j8eM"
-//     return  fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`, {
-//         method: "POST",
-//         body: JSON.stringify( {
-//             email, password,
-//             returnSecureToken: true
-//         }),
-//         headers: {
-//             "Content-Type": "application/json"
-//         }
-//     }).then(response => response.json())
-//         .then(data =>console.log(data))
-//         .catch(() => console.log('error'))
-// }

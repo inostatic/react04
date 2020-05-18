@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import s from './modalAuth.module.scss'
-import {authWithEmailAndPassword} from "../../../API/auth";
+import {authWithEmailAndPassword, createUserWithEmailAndPassword} from "../../../API/auth";
 
 
 export const ModalAuth = ({modalAuth ,openCloseModalAuth, renderAfterInputAuth}) => {
@@ -13,7 +13,11 @@ export const ModalAuth = ({modalAuth ,openCloseModalAuth, renderAfterInputAuth})
             setForm(!form)
         }
     }
-
+    const reg = () => {
+        if(email && pass) {
+            createUserWithEmailAndPassword(email, pass)
+        }
+    }
     useEffect(() => {
         authWithEmailAndPassword(email, pass)
             .then(token => {
@@ -45,7 +49,7 @@ export const ModalAuth = ({modalAuth ,openCloseModalAuth, renderAfterInputAuth})
                                 <input type="password" onChange={(e) => {setPass(e.target.value)}} value={pass}/>
                                 <div className={s.btn_reg}>
                                     <button onClick={sendForm}>Войти</button>
-                                    <button>Регистрация</button>
+                                    <button onClick={reg}>Регистрация</button>
                                 </div>
                             </div>
                         </div>
