@@ -4,10 +4,15 @@ import {NavLink} from "react-router-dom";
 import {ModalAuth} from "../Modal/auth/ModalAuth";
 import {openCloseModalAuth, renderAfterInputAuth, renderAfterOutputAuth} from "../../actions/actions";
 import {connect} from "react-redux";
+import {outFirebase} from "../../API/auth";
+
 
 const Navbar = ({auth, modalAuth, openCloseModalAuth, renderAfterInputAuth, renderAfterOutputAuth}) => {
 
-
+    const output = () => {
+        outFirebase()
+        renderAfterOutputAuth()
+    }
 
     return (
         <>
@@ -18,7 +23,7 @@ const Navbar = ({auth, modalAuth, openCloseModalAuth, renderAfterInputAuth, rend
                         ? <>
                              <NavLink className={s.nav} to="/">Моя страница</NavLink>
                              <NavLink className={s.nav} to="profile">Профиль</NavLink>
-                             <button className={s.btn} onClick={renderAfterOutputAuth}>Выйти</button>
+                             <button className={s.btn} onClick={output}>Выйти</button>
                          </>
                         : <button className={s.btn} onClick={openCloseModalAuth}>Войти</button>
                 }

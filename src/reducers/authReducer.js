@@ -1,4 +1,6 @@
 import {INPUT_AUTH, OUTPUT_AUTH} from "../constants/const";
+import {createUserWithEmailAndPassword} from "../API/auth";
+import {renderAfterInputAuth} from "../actions/actions";
 
 
 let initialState = {
@@ -27,6 +29,28 @@ export const authReducer = (state = initialState, action) => {
             }
         }
         default: return state
+    }
+}
+
+
+export const thunkCreateUser = (email, password) => {
+    return  (dispatch) => {
+        createUserWithEmailAndPassword(email, password).then((response) => {
+            dispatch(renderAfterInputAuth(response.user.uid))
+        })
+
+    }
+}
+
+export const thunkInput = () => {
+    return (dispatch) => {
+
+    }
+}
+
+export const thunkOutput = () => {
+    return  (dispatch) => {
+
     }
 }
 

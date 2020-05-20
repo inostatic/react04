@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from "react"
 import s from "./main.module.scss"
 import {connect} from "react-redux";
-import {getImageThunkCreator, openCloseModalPhoto} from "../../actions/actions";
+import {openCloseModalPhoto} from "../../actions/actions";
 import {ModalPhoto} from "../Modal/photo/ModalPhoto";
 import {AddImage} from "../Form/AddImage";
-import {createUserWithEmailAndPassword} from "../../API/auth";
+import {getImageThunkCreator} from "../../reducers/dataReducer";
+
 
 
 const Main = ({modalPhoto, auth, images, openCloseModalPhoto, getImageThunkCreator}) => {
