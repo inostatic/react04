@@ -26,9 +26,11 @@ export function authWithEmailAndPassword(email, password) {
 
 
 export const createUserWithEmailAndPassword = (email, password) => {
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(error => {
-        console.log('error', error)
-    });
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(response => response)
+    //     .catch(error => {
+    //     console.log('error', error)
+    // });
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -44,7 +46,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 export const outFirebase = () => {
     firebase.auth().signOut().then(function() {
-        // Sign-out successful.
+
     }).catch(function(error) {
         // An error happened.
     });

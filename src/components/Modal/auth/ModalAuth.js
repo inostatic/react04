@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react"
 import s from './modalAuth.module.scss'
-import {authWithEmailAndPassword, createUserWithEmailAndPassword} from "../../../API/auth";
 
 
-export const ModalAuth = ({modalAuth ,openCloseModalAuth, renderAfterInputAuth}) => {
+
+export const ModalAuth = ({modalAuth ,openCloseModalAuth, thunkCreateUser, thunkInput}) => {
     let [email, setEmail] = useState('')
     let [pass, setPass] = useState('')
     let [form, setForm] = useState(false)
@@ -15,18 +15,16 @@ export const ModalAuth = ({modalAuth ,openCloseModalAuth, renderAfterInputAuth})
     }
     const reg = () => {
         if(email && pass) {
-            createUserWithEmailAndPassword(email, pass)
+            thunkCreateUser(email, pass)
         }
     }
     useEffect(() => {
-        authWithEmailAndPassword(email, pass)
-            .then(token => {
-                if(token) {
-                    renderAfterInputAuth(token)
-                    openCloseModalAuth()
-                }})
-        setPass('')
-        setEmail('')
+        if(form) {
+            thunkInput(email, pass)
+            setPass('')
+            setEmail('')
+        }
+
     },[form])
 
     const closeModalAuth = (event) => {

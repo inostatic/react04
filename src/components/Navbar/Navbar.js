@@ -2,17 +2,13 @@ import React from "react"
 import s from "./navbar.module.scss"
 import {NavLink} from "react-router-dom";
 import {ModalAuth} from "../Modal/auth/ModalAuth";
-import {openCloseModalAuth, renderAfterInputAuth, renderAfterOutputAuth} from "../../actions/actions";
+import {openCloseModalAuth} from "../../actions/actions";
 import {connect} from "react-redux";
-import {outFirebase} from "../../API/auth";
+import {thunkCreateUser, thunkInput, thunkOutput} from "../../reducers/authReducer";
 
 
-const Navbar = ({auth, modalAuth, openCloseModalAuth, renderAfterInputAuth, renderAfterOutputAuth}) => {
+const Navbar = ({auth, modalAuth, openCloseModalAuth, thunkCreateUser, thunkInput, thunkOutput}) => {
 
-    const output = () => {
-        outFirebase()
-        renderAfterOutputAuth()
-    }
 
     return (
         <>
@@ -23,14 +19,15 @@ const Navbar = ({auth, modalAuth, openCloseModalAuth, renderAfterInputAuth, rend
                         ? <>
                              <NavLink className={s.nav} to="/">Моя страница</NavLink>
                              <NavLink className={s.nav} to="profile">Профиль</NavLink>
-                             <button className={s.btn} onClick={output}>Выйти</button>
+                             <button className={s.btn} onClick={thunkOutput}>Выйти</button>
                          </>
                         : <button className={s.btn} onClick={openCloseModalAuth}>Войти</button>
                 }
             </header>
             {modalAuth ? <ModalAuth modalAuth={modalAuth}
                                 openCloseModalAuth={openCloseModalAuth}
-                                renderAfterInputAuth={renderAfterInputAuth}
+                                    thunkCreateUser={thunkCreateUser}
+                                    thunkInput={thunkInput}
                 />
                             : null}
         </>
@@ -39,6 +36,7 @@ const Navbar = ({auth, modalAuth, openCloseModalAuth, renderAfterInputAuth, rend
 
 export const NavbarContainer = connect((state) => ({auth: state.authReducer.auth, modalAuth: state.modalReducer.modalAuth}), {
     openCloseModalAuth,
-    renderAfterInputAuth,
-    renderAfterOutputAuth
+    thunkCreateUser,
+    thunkInput,
+    thunkOutput
 })(Navbar)

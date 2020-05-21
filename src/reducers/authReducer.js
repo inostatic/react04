@@ -1,6 +1,6 @@
 import {INPUT_AUTH, OUTPUT_AUTH} from "../constants/const";
-import {createUserWithEmailAndPassword} from "../API/auth";
-import {renderAfterInputAuth} from "../actions/actions";
+import {authWithEmailAndPassword, createUserWithEmailAndPassword, outFirebase} from "../API/auth";
+import {openCloseModalAuth, renderAfterInputAuth, renderAfterOutputAuth} from "../actions/actions";
 
 
 let initialState = {
@@ -36,21 +36,26 @@ export const authReducer = (state = initialState, action) => {
 export const thunkCreateUser = (email, password) => {
     return  (dispatch) => {
         createUserWithEmailAndPassword(email, password).then((response) => {
-            dispatch(renderAfterInputAuth(response.user.uid))
+            dispatch(renderAfterInputAuth(response))
         })
 
     }
 }
 
-export const thunkInput = () => {
+export const thunkInput = (email, password) => {
     return (dispatch) => {
+        authWithEmailAndPassword(email,password).then(response => {
+            dispatch(renderAfterInputAuth(response))
+            dispatch(openCloseModalAuth())
+        })
 
     }
 }
 
 export const thunkOutput = () => {
     return  (dispatch) => {
-
+        outFirebase()
+        dispatch(renderAfterOutputAuth())
     }
 }
 

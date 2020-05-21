@@ -5,10 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/API/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/auth/ModalAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/auth/ModalAuth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/dataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/dataReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +61,8 @@
       <workItem from="1589744562354" duration="962000" />
       <workItem from="1589826494298" duration="6483000" />
       <workItem from="1589907403654" duration="2272000" />
-      <workItem from="1589995175202" duration="5981000" />
+      <workItem from="1589995175202" duration="6063000" />
+      <workItem from="1590084753625" duration="6994000" />
     </task>
     <servers />
   </component>
