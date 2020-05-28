@@ -1,14 +1,17 @@
-import React from "react"
+import React, {useEffect} from "react"
 import s from "./navbar.module.scss"
 import {NavLink} from "react-router-dom";
 import {ModalAuth} from "../Modal/auth/ModalAuth";
 import {openCloseModalAuth} from "../../actions/actions";
 import {connect} from "react-redux";
-import {thunkCreateUser, thunkInput, thunkOutput} from "../../reducers/authReducer";
+import {checkAuth, thunkCreateUser, thunkInput, thunkOutput} from "../../reducers/authReducer";
 
 
-const Navbar = ({auth, modalAuth, openCloseModalAuth, thunkCreateUser, thunkInput, thunkOutput}) => {
+const Navbar = ({auth, modalAuth, openCloseModalAuth, thunkCreateUser, thunkInput, thunkOutput, checkAuth}) => {
 
+    useEffect(() => {
+        checkAuth()
+    },[])
 
     return (
         <>
@@ -34,9 +37,18 @@ const Navbar = ({auth, modalAuth, openCloseModalAuth, thunkCreateUser, thunkInpu
     )
 }
 
-export const NavbarContainer = connect((state) => ({auth: state.authReducer.auth, modalAuth: state.modalReducer.modalAuth}), {
+
+let mapStateToProps = (state) => {
+    return {
+        auth: state.authReducer.auth,
+        modalAuth: state.modalReducer.modalAuth
+    }
+}
+
+export const NavbarContainer = connect(mapStateToProps, {
     openCloseModalAuth,
     thunkCreateUser,
     thunkInput,
-    thunkOutput
+    thunkOutput,
+    checkAuth
 })(Navbar)

@@ -42,9 +42,18 @@ const Main = ({modalPhoto, auth, images, openCloseModalPhoto, getImageThunkCreat
     )
 }
 
-export const MainContainer = connect(state => ({modalPhoto: state.modalReducer.modalPhoto,
-    auth: state.authReducer.auth,
-    images: state.dataReducer.images}), {
+
+
+let mapStateToProps = (state) => {
+    return {
+        modalPhoto: state.modalReducer.modalPhoto,
+        auth: state.authReducer.auth,
+        images: state.dataReducer.images
+    }
+}
+
+
+export const MainContainer = connect(mapStateToProps, {
     openCloseModalPhoto,
     getImageThunkCreator
 })(Main)

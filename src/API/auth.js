@@ -18,7 +18,6 @@ firebase.initializeApp(firebaseConfig);
 export function authWithEmailAndPassword(email, password) {
     return firebase.auth().signInWithEmailAndPassword(email, password)
         .then(response => {
-            console.log(response)
             return response.user.uid
         })
         .catch(error => alert(error.message))
@@ -33,15 +32,16 @@ export const createUserWithEmailAndPassword = (email, password) => {
     // });
 }
 
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        // User is signed in.
-        console.log(user)
-    } else {
-        // No user is signed in.
-        console.log(user)
-    }
-});
+// firebase.auth().onAuthStateChanged(function(user) {
+//     if (user) {
+//         // User is signed in.
+//         // console.log(user)
+//
+//     } else {
+//         // No user is signed in.
+//         console.log(user)
+//     }
+// });
 
 
 export const outFirebase = () => {

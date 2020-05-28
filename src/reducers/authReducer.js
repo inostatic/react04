@@ -1,6 +1,7 @@
 import {INPUT_AUTH, OUTPUT_AUTH} from "../constants/const";
 import {authWithEmailAndPassword, createUserWithEmailAndPassword, outFirebase} from "../API/auth";
-import {openCloseModalAuth, renderAfterInputAuth, renderAfterOutputAuth} from "../actions/actions";
+import {openCloseModalAuth, renderAfterInputAuth, renderAfterOutputAuth, setProfile} from "../actions/actions";
+import firebase from "firebase";
 
 
 let initialState = {
@@ -60,4 +61,15 @@ export const thunkOutput = () => {
 }
 
 
-
+export const checkAuth = () => {
+    return (dispatch) => {
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                dispatch(renderAfterInputAuth(user.uid))
+            } else {
+                // No user is signed in.
+                console.log('не авторизирован')
+            }
+        })
+    }
+}

@@ -6,25 +6,31 @@
     flex-direction: column;
     font-family: Roboto;
     font-size: 16px;
+    font-weight: 600;
     flex: 1 0 auto;
     .input {
         margin: 10px 0;
         width: 500px;
         height: 25px;
-        border-radius: 5px;
+    }
+    .input_date {
+        margin: 10px 0;
+        width: 500px;
+        height: 27px;
     }
 
     .button {
-        margin-left: 10px;
         width: 150px;
         height: 31px;
         background: #454f64;
         color: white;
         font-family: Roboto;
-        font-size: 14px;
-        border-radius: 5px;
+        font-size: 16px;
         border: 1px solid #454f64;
         cursor: pointer;
+        &:hover {
+            color: gold;
+        }
     }
 }
 

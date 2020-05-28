@@ -1,26 +1,55 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import s from "./profile.module.scss"
+import {connect} from "react-redux";
+import {thunkFullProfile} from "../../reducers/profileReducer";
 
 
-export const Profile = () => {
+const Profile = ({displayName, photoURL, phoneNumber, thunkFullProfile}) => {
+    let [dispName, setDispName] = useState('')
+    let [phURL, setPhUrl] = useState(photoURL)
+    let [phNum, setPhNum] = useState(phoneNumber)
+
+
+
+    useEffect(() => {
+        thunkFullProfile()
+        setDispName(displayName)
+    },[])
 
     return (
         <div className={s.profile}>
-            <label >Имя: </label>
+            <label >ФИО: </label>
             <div>
-                <input type="text" id={"name"} className={s.input}/>
+                <input type="text" className={s.input} value={dispName ? dispName : displayName || ''}
+                       onChange={(e) => setDispName(e.target.value)}/>
                 <button className={s.button}>Изменить</button>
             </div>
-            <label >Фамилия: </label>
+            <label >Аватар пользователя: </label>
             <div>
-                <input type="text" id={"surname"} className={s.input}/>
+                <input type="text" className={s.input} value={phURL ? phURL : '' }
+                       onChange={(e) => setPhUrl(e.target.value)}/>
                 <button className={s.button}>Изменить</button>
             </div>
-            <label >Дата рождения: </label>
+            <label >Номер телефона: </label>
             <div>
-                <input type="date" id={"middlename"} className={s.input}/>
+                <input type="text" className={s.input} value={phNum ? phNum : '' }
+                onChange={(e) => setPhNum(e.target.value)} />
                 <button className={s.button}>Изменить</button>
             </div>
         </div>
     )
 }
+
+
+let mapStateToProps = (state) => {
+    return {
+        displayName: state.profileReducer.displayName,
+        photoURL: state.profileReducer.photoURL,
+        phoneNumber: state.profileReducer.phoneNumber
+    }
+}
+
+
+export const ProfileContainer = connect(mapStateToProps, {
+    thunkFullProfile
+})(Profile)
