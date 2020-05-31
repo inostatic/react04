@@ -372,3 +372,24 @@
 //     }
 // }
 //
+
+
+
+// export const thunkFullProfile = () => {
+//
+//     return (dispatch) => {
+//         let user = getUser()
+//             if (user != null) {
+//                 console.log(user)
+//                 debugger
+//                 dispatch(setProfile({displayName: user.displayName, phoneNumber: user.phoneNumber, photoURL: user.photoURL}))
+//             }
+//     }
+// }
+
+           {/*<label >Номер телефона: </label>*/}
+            {/*<div>*/}
+            {/*    <input type="text" className={s.input} value={phNum ? phNum : phoneNumber || '' }*/}
+            {/*    onChange={(e) => setPhNum(e.target.value)} />*/}
+            {/*    <button className={s.button}  onClick={() => updateProfile('pn')}>Изменить</button>*/}
+            {/*</div>*/}

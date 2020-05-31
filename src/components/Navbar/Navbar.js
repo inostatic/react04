@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 import {ModalAuth} from "../Modal/auth/ModalAuth";
 import {openCloseModalAuth} from "../../actions/actions";
 import {connect} from "react-redux";
-import {checkAuth, thunkCreateUser, thunkInput, thunkOutput} from "../../reducers/authReducer";
+import {checkAuth, thunkCreateUser, thunkInput, thunkOutput} from "../../actions/thunk";
 
 
 const Navbar = ({auth, modalAuth, openCloseModalAuth, thunkCreateUser, thunkInput, thunkOutput, checkAuth}) => {

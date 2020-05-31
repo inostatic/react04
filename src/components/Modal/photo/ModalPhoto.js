@@ -1,12 +1,14 @@
 import React, {useState} from "react"
 import s from "./modalPhoto.module.scss"
 
-export const ModalPhoto = ({openCloseModalPhoto, src, photoId, images}) => {
+export const ModalPhoto = ({openCloseModalPhoto, src, photoId, images, username, userPhoto}) => {
     let date = "16:48 07.08.2020"
     let countImg = images.length - 1
     let [id, setId] = useState(Number(photoId))
     let [photoSrc, setPhotoSrc] = useState(src)
     let [sliders, setSliders] = useState(getSliders())
+    // let [username, setUsername] = useState()
+
 
     function getSliders() {
         if (photoId < countImg - 5) {
@@ -15,7 +17,6 @@ export const ModalPhoto = ({openCloseModalPhoto, src, photoId, images}) => {
             return images.slice(countImg - 5, countImg + 1)
         }
     }
-
     const closeModalPhoto = (event) => {
         if(event.target.dataset.close === "true") {
             openCloseModalPhoto()
@@ -55,7 +56,6 @@ export const ModalPhoto = ({openCloseModalPhoto, src, photoId, images}) => {
         }
     }
 
-
     return (
         <div className={s.modal_overlay} data-close={"true"} onClick={closeModalPhoto}>
             <div className={s.modal}>
@@ -67,131 +67,131 @@ export const ModalPhoto = ({openCloseModalPhoto, src, photoId, images}) => {
                 <div className={s.right}>
                     <div className={s.author}>
                         <div className={s.circle}></div>
-                        <b className={s.author_name}>Anastasya Lalz</b>
+                        <b className={s.author_name}>{username}</b>
                         <span className={s.date}>{date}</span>
                     </div>
                     <hr className={s.hr}/>
                     <div className={s.comments}>
-                        <div className={s.comment}>
-                            <div className={s.com_author_block}>
-                                <div className={s.com_author_name}>Stanislav Bogdanov</div>
-                                <div className={s.comment_date}>{date}</div>
-                            </div>
-                            <div className={s.com_text_block}>
-                                <div className={s.com_circle}></div>
-                                <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Hic, non?
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.comment}>
-                            <div className={s.com_author_block}>
-                                <div className={s.com_author_name}>Andrew Grinch</div>
-                                <div className={s.comment_date}>{date}</div>
-                            </div>
-                            <div className={s.com_text_block}>
-                                <div className={s.com_circle}></div>
-                                <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Hic, non? Lorem ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.comment}>
-                            <div className={s.com_author_block}>
-                                <div className={s.com_author_name}>Eric Cartman</div>
-                                <div className={s.comment_date}>{date}</div>
-                            </div>
-                            <div className={s.com_text_block}>
-                                <div className={s.com_circle}></div>
-                                <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Hic, non? Lorem ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.comment}>
-                            <div className={s.com_author_block}>
-                                <div className={s.com_author_name}>Anastasya Buchkova</div>
-                                <div className={s.comment_date}>{date}</div>
-                            </div>
-                            <div className={s.com_text_block}>
-                                <div className={s.com_circle}></div>
-                                <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Mollitia, quis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, non?
-                                    Lorem
-                                    ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.comment}>
-                            <div className={s.com_author_block}>
-                                <div className={s.com_author_name}>Cloud Rise</div>
-                                <div className={s.comment_date}>{date}</div>
-                            </div>
-                            <div className={s.com_text_block}>
-                                <div className={s.com_circle}></div>
-                                <div className={s.comment_text}> Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Amet eum illo iure libero, recusandae tenetur?Lorem ipsum dolor sit amet,
-                                    consectetur
-                                    adipisicing elit. Hic, non? Lorem ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.comment}>
-                            <div className={s.com_author_block}>
-                                <div className={s.com_author_name}>So Gerera</div>
-                                <div className={s.comment_date}>{date}</div>
-                            </div>
-                            <div className={s.com_text_block}>
-                                <div className={s.com_circle}></div>
-                                <div className={s.comment_text}>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Hic, non? Lorem ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.comment}>
-                            <div className={s.com_author_block}>
-                                <div className={s.com_author_name}>Obi-Wan Kenobi</div>
-                                <div className={s.comment_date}>{date}</div>
-                            </div>
-                            <div className={s.com_text_block}>
-                                <div className={s.com_circle}></div>
-                                <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Hic, non? Lorem ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.comment}>
-                            <div className={s.com_author_block}>
-                                <div className={s.com_author_name}>Stanislav Bogdanov</div>
-                                <div className={s.comment_date}>{date}</div>
-                            </div>
-                            <div className={s.com_text_block}>
-                                <div className={s.com_circle}></div>
-                                <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Hic, non? Lorem ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.comment}>
-                            <div className={s.com_author_block}>
-                                <div className={s.com_author_name}>Stanislav Bogdanov</div>
-                                <div className={s.comment_date}>{date}</div>
-                            </div>
-                            <div className={s.com_text_block}>
-                                <div className={s.com_circle}></div>
-                                <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                    Hic, non? Lorem ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
+                    {/*    <div className={s.comment}>*/}
+                    {/*        <div className={s.com_author_block}>*/}
+                    {/*            <div className={s.com_author_name}>Stanislav Bogdanov</div>*/}
+                    {/*            <div className={s.comment_date}>{date}</div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className={s.com_text_block}>*/}
+                    {/*            <div className={s.com_circle}></div>*/}
+                    {/*            <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing*/}
+                    {/*                elit.*/}
+                    {/*                Hic, non?*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={s.comment}>*/}
+                    {/*        <div className={s.com_author_block}>*/}
+                    {/*            <div className={s.com_author_name}>Andrew Grinch</div>*/}
+                    {/*            <div className={s.comment_date}>{date}</div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className={s.com_text_block}>*/}
+                    {/*            <div className={s.com_circle}></div>*/}
+                    {/*            <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing*/}
+                    {/*                elit.*/}
+                    {/*                Hic, non? Lorem ipsum dolor sit amet.*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={s.comment}>*/}
+                    {/*        <div className={s.com_author_block}>*/}
+                    {/*            <div className={s.com_author_name}>Eric Cartman</div>*/}
+                    {/*            <div className={s.comment_date}>{date}</div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className={s.com_text_block}>*/}
+                    {/*            <div className={s.com_circle}></div>*/}
+                    {/*            <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing*/}
+                    {/*                elit.*/}
+                    {/*                Hic, non? Lorem ipsum dolor sit amet.*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={s.comment}>*/}
+                    {/*        <div className={s.com_author_block}>*/}
+                    {/*            <div className={s.com_author_name}>Anastasya Buchkova</div>*/}
+                    {/*            <div className={s.comment_date}>{date}</div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className={s.com_text_block}>*/}
+                    {/*            <div className={s.com_circle}></div>*/}
+                    {/*            <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing*/}
+                    {/*                elit.*/}
+                    {/*                Mollitia, quis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, non?*/}
+                    {/*                Lorem*/}
+                    {/*                ipsum dolor sit amet.*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={s.comment}>*/}
+                    {/*        <div className={s.com_author_block}>*/}
+                    {/*            <div className={s.com_author_name}>Cloud Rise</div>*/}
+                    {/*            <div className={s.comment_date}>{date}</div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className={s.com_text_block}>*/}
+                    {/*            <div className={s.com_circle}></div>*/}
+                    {/*            <div className={s.comment_text}> Lorem ipsum dolor sit amet, consectetur adipisicing*/}
+                    {/*                elit.*/}
+                    {/*                Amet eum illo iure libero, recusandae tenetur?Lorem ipsum dolor sit amet,*/}
+                    {/*                consectetur*/}
+                    {/*                adipisicing elit. Hic, non? Lorem ipsum dolor sit amet.*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={s.comment}>*/}
+                    {/*        <div className={s.com_author_block}>*/}
+                    {/*            <div className={s.com_author_name}>So Gerera</div>*/}
+                    {/*            <div className={s.comment_date}>{date}</div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className={s.com_text_block}>*/}
+                    {/*            <div className={s.com_circle}></div>*/}
+                    {/*            <div className={s.comment_text}>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,*/}
+                    {/*                consectetur adipisicing elit. Hic, non? Lorem ipsum dolor sit amet.*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={s.comment}>*/}
+                    {/*        <div className={s.com_author_block}>*/}
+                    {/*            <div className={s.com_author_name}>Obi-Wan Kenobi</div>*/}
+                    {/*            <div className={s.comment_date}>{date}</div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className={s.com_text_block}>*/}
+                    {/*            <div className={s.com_circle}></div>*/}
+                    {/*            <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing*/}
+                    {/*                elit.*/}
+                    {/*                Hic, non? Lorem ipsum dolor sit amet.*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={s.comment}>*/}
+                    {/*        <div className={s.com_author_block}>*/}
+                    {/*            <div className={s.com_author_name}>Stanislav Bogdanov</div>*/}
+                    {/*            <div className={s.comment_date}>{date}</div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className={s.com_text_block}>*/}
+                    {/*            <div className={s.com_circle}></div>*/}
+                    {/*            <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing*/}
+                    {/*                elit.*/}
+                    {/*                Hic, non? Lorem ipsum dolor sit amet.*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className={s.comment}>*/}
+                    {/*        <div className={s.com_author_block}>*/}
+                    {/*            <div className={s.com_author_name}>Stanislav Bogdanov</div>*/}
+                    {/*            <div className={s.comment_date}>{date}</div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className={s.com_text_block}>*/}
+                    {/*            <div className={s.com_circle}></div>*/}
+                    {/*            <div className={s.comment_text}>Lorem ipsum dolor sit amet, consectetur adipisicing*/}
+                    {/*                elit.*/}
+                    {/*                Hic, non? Lorem ipsum dolor sit amet.*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
                     </div>
                     <hr className={s.hr}/>
                     <div className={s.form}>

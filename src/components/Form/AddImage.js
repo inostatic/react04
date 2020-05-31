@@ -4,11 +4,11 @@ import {axiosPost} from "../../API/API";
 
 export const AddImage = ({getImageThunkCreator}) => {
     let [url, setUrl] = useState('')
-
+    let email = 'e'
     const add = (e) => {
         e.preventDefault()
         if (url) {
-            axiosPost(url).then(() => {
+            axiosPost(url, email).then(() => {
                 setUrl('')
                 getImageThunkCreator()
             })

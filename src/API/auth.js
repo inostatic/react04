@@ -17,9 +17,7 @@ firebase.initializeApp(firebaseConfig);
 
 export function authWithEmailAndPassword(email, password) {
     return firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(response => {
-            return response.user.uid
-        })
+        .then(response => response.user)
         .catch(error => alert(error.message))
 }
 
@@ -27,21 +25,9 @@ export function authWithEmailAndPassword(email, password) {
 export const createUserWithEmailAndPassword = (email, password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(response => response)
-    //     .catch(error => {
-    //     console.log('error', error)
-    // });
 }
 
-// firebase.auth().onAuthStateChanged(function(user) {
-//     if (user) {
-//         // User is signed in.
-//         // console.log(user)
-//
-//     } else {
-//         // No user is signed in.
-//         console.log(user)
-//     }
-// });
+
 
 
 export const outFirebase = () => {
@@ -53,8 +39,11 @@ export const outFirebase = () => {
 }
 
 
+export const getUser = () => {
+    return firebase.auth().currentUser
+}
 
-
+export const user = firebase.auth().currentUser;
 
 
 

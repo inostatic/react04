@@ -3,16 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="3924c6c4-f77e-420f-94f7-7a254a18bc24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/API/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/AddImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/AddImage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/auth/ModalAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/auth/ModalAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/profile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/profile.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/const.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/transformObjectToArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/transformObjectToArray.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/musor" beforeDir="false" afterPath="$PROJECT_DIR$/src/musor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/dataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/dataReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/profileReducer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/taskboard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/taskboard.txt" afterDir="false" />
     </list>
@@ -74,7 +79,9 @@
       <workItem from="1590230866328" duration="1266000" />
       <workItem from="1590339025725" duration="2915000" />
       <workItem from="1590591130966" duration="3017000" />
-      <workItem from="1590687297712" duration="12408000" />
+      <workItem from="1590687297712" duration="12518000" />
+      <workItem from="1590785014089" duration="9089000" />
+      <workItem from="1590945395643" duration="11273000" />
     </task>
     <servers />
   </component>
@@ -86,10 +93,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="736" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1589574816358" />
-    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588853451563">
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590962991296">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588853451563" />
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1590962991296" />
     <state x="594" y="303" key="EditFileWatcherDialog" timestamp="1589632220566">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

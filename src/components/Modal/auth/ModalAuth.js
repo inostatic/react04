@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import s from './modalAuth.module.scss'
 
 
@@ -6,11 +6,12 @@ import s from './modalAuth.module.scss'
 export const ModalAuth = ({modalAuth ,openCloseModalAuth, thunkCreateUser, thunkInput}) => {
     let [email, setEmail] = useState('')
     let [pass, setPass] = useState('')
-    let [form, setForm] = useState(false)
 
     const sendForm = () => {
         if(email && pass) {
-            setForm(!form)
+            thunkInput(email, pass)
+            setPass('')
+            setEmail('')
         }
     }
     const reg = () => {
@@ -18,14 +19,6 @@ export const ModalAuth = ({modalAuth ,openCloseModalAuth, thunkCreateUser, thunk
             thunkCreateUser(email, pass)
         }
     }
-    useEffect(() => {
-        if(form) {
-            thunkInput(email, pass)
-            setPass('')
-            setEmail('')
-        }
-
-    },[form])
 
     const closeModalAuth = (event) => {
         if(event.target.dataset.close === "true") {

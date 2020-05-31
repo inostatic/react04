@@ -4,13 +4,14 @@ import {connect} from "react-redux";
 import {openCloseModalPhoto} from "../../actions/actions";
 import {ModalPhoto} from "../Modal/photo/ModalPhoto";
 import {AddImage} from "../Form/AddImage";
-import {getImageThunkCreator} from "../../reducers/dataReducer";
+import {getImageThunkCreator} from "../../actions/thunk";
 
 
 
-const Main = ({modalPhoto, auth, images, openCloseModalPhoto, getImageThunkCreator}) => {
+const Main = ({modalPhoto, auth, images, username, userPhoto, openCloseModalPhoto, getImageThunkCreator}) => {
     const [photoId, setPhotoId] = useState('')
     const [src, setSrc] = useState('')
+    let email = 'e'
 
     const openModalPhoto = (e) => {
         setPhotoId(e.target.id || e.target.firstChild.id)
@@ -22,11 +23,12 @@ const Main = ({modalPhoto, auth, images, openCloseModalPhoto, getImageThunkCreat
         getImageThunkCreator()
     }, [])
 
-
     return (
         <>
             {auth
-                ? <AddImage getImageThunkCreator={getImageThunkCreator}/>
+                ? <AddImage getImageThunkCreator={getImageThunkCreator}
+                email={email}
+                />
                 : null}
             {images
                 ? <div className={s.main}>
@@ -36,7 +38,13 @@ const Main = ({modalPhoto, auth, images, openCloseModalPhoto, getImageThunkCreat
                 </div>
                 : null}
             {modalPhoto
-                ? <ModalPhoto openCloseModalPhoto={openCloseModalPhoto} src={src} photoId={photoId} images={images}/>
+                ? <ModalPhoto openCloseModalPhoto={openCloseModalPhoto}
+                              src={src}
+                              photoId={photoId}
+                              images={images}
+                              username={username}
+                              userPhoto={userPhoto}
+                />
                 : null}
         </>
     )
@@ -48,7 +56,9 @@ let mapStateToProps = (state) => {
     return {
         modalPhoto: state.modalReducer.modalPhoto,
         auth: state.authReducer.auth,
-        images: state.dataReducer.images
+        images: state.dataReducer.images,
+        username: state.authReducer.displayName,
+        userPhoto: state.authReducer.photoURL
     }
 }
 
