@@ -4,14 +4,13 @@ import {connect} from "react-redux";
 import {openCloseModalPhoto} from "../../actions/actions";
 import {ModalPhoto} from "../Modal/photo/ModalPhoto";
 import {AddImage} from "../Form/AddImage";
-import {getImageThunkCreator} from "../../actions/thunk";
+import {getArrData} from "../../actions/thunk";
 
 
 
-const Main = ({modalPhoto, auth, images, username, userPhoto, openCloseModalPhoto, getImageThunkCreator}) => {
+const Main = ({modalPhoto, auth, images, username, userPhoto, email, openCloseModalPhoto, getArrData}) => {
     const [photoId, setPhotoId] = useState('')
     const [src, setSrc] = useState('')
-    let email = 'e'
 
     const openModalPhoto = (e) => {
         setPhotoId(e.target.id || e.target.firstChild.id)
@@ -20,13 +19,13 @@ const Main = ({modalPhoto, auth, images, username, userPhoto, openCloseModalPhot
     }
 
     useEffect(() => {
-        getImageThunkCreator()
+        getArrData()
     }, [])
 
     return (
         <>
             {auth
-                ? <AddImage getImageThunkCreator={getImageThunkCreator}
+                ? <AddImage getArrData={getArrData}
                 email={email}
                 />
                 : null}
@@ -58,14 +57,15 @@ let mapStateToProps = (state) => {
         auth: state.authReducer.auth,
         images: state.dataReducer.images,
         username: state.authReducer.displayName,
-        userPhoto: state.authReducer.photoURL
+        userPhoto: state.authReducer.photoURL,
+        email: state.authReducer.email
     }
 }
 
 
 export const MainContainer = connect(mapStateToProps, {
     openCloseModalPhoto,
-    getImageThunkCreator
+    getArrData
 })(Main)
 
 

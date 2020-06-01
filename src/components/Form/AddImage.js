@@ -1,16 +1,16 @@
 import React, {useState} from "react"
 import s from './AddImage.module.scss'
-import {axiosPost} from "../../API/API";
+import {addPhoto} from "../../API/API";
 
-export const AddImage = ({getImageThunkCreator}) => {
+export const AddImage = ({email , getArrData}) => {
     let [url, setUrl] = useState('')
-    let email = 'e'
+
     const add = (e) => {
         e.preventDefault()
         if (url) {
-            axiosPost(url, email).then(() => {
+            addPhoto(url, email).then(() => {
                 setUrl('')
-                getImageThunkCreator()
+                getArrData()
             })
             setUrl('')
         }

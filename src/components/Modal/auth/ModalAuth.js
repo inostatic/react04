@@ -3,20 +3,20 @@ import s from './modalAuth.module.scss'
 
 
 
-export const ModalAuth = ({modalAuth ,openCloseModalAuth, thunkCreateUser, thunkInput}) => {
+export const ModalAuth = ({modalAuth ,openCloseModalAuth, createUser, signIn}) => {
     let [email, setEmail] = useState('')
     let [pass, setPass] = useState('')
 
     const sendForm = () => {
         if(email && pass) {
-            thunkInput(email, pass)
+            signIn(email, pass)
             setPass('')
             setEmail('')
         }
     }
     const reg = () => {
         if(email && pass) {
-            thunkCreateUser(email, pass)
+            createUser(email, pass)
         }
     }
 

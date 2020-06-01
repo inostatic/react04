@@ -1,21 +1,31 @@
 import firebase from "firebase";
-import {axiosGet} from "../API/API";
+import {addUser, getPhotos} from "../API/API";
 import {authWithEmailAndPassword, createUserWithEmailAndPassword, getUser, outFirebase} from "../API/auth";
-import {openCloseModalAuth, renderAfterInputAuth, renderAfterOutputAuth, setImage} from "./actions";
+import {
+    openCloseModalAuth,
+    renderAfterInputAuth,
+    renderAfterOutputAuth,
+    setDisplayName,
+    setImage,
+    setPhotoURL
+} from "./actions";
 import {transformObjectToArray} from "../functions/transformObjectToArray";
 
 
 
-export const thunkCreateUser = (email, password) => {
+export const createUser = (email, password) => {
     return  (dispatch) => {
         createUserWithEmailAndPassword(email, password).then((response) => {
+            debugger
+            // addUser(email).then()
             dispatch(renderAfterInputAuth(response))
+
         })
 
     }
 }
 
-export const thunkInput = (email, password) => {
+export const signIn = (email, password) => {
     return (dispatch) => {
         authWithEmailAndPassword(email,password).then(response => {
             dispatch(renderAfterInputAuth(response))
@@ -24,7 +34,7 @@ export const thunkInput = (email, password) => {
     }
 }
 
-export const thunkOutput = () => {
+export const signOut = () => {
     return  (dispatch) => {
         outFirebase()
         dispatch(renderAfterOutputAuth())
@@ -44,30 +54,34 @@ export const checkAuth = () => {
 
 
 
-export const getImageThunkCreator = () => {
+export const getArrData = () => {
     return (dispatch) => {
-        axiosGet().then(data => {
+        getPhotos().then(data => {
             dispatch(setImage(transformObjectToArray(data)))
         })
     }
 }
 
 
-export const thunkSetProfile = (type, payload) => {
+export const setProfile = (type, payload) => {
     let user = getUser()
     console.log(user)
     switch (type) {
         case 'dn' : {
             return (dispatch) => {
                 user.updateProfile({displayName: payload})
-                    .then(response => console.log(response))
+                    .then(() => {
+                        dispatch(setDisplayName(payload))
+                    })
                     .catch(err => console.log(err))
             }
         }
         case  'pu' : {
             return (dispatch) => {
                 user.updateProfile({photoURL: payload})
-                    .then(response => console.log(response))
+                    .then(() => {
+                        dispatch(setPhotoURL(payload))
+                    })
                     .catch(err => console.log(err))
             }
         }

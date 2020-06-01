@@ -6,19 +6,12 @@
       <change beforePath="$PROJECT_DIR$/src/API/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/API/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/thunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form/AddImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/AddImage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal/auth/ModalAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/auth/ModalAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/const.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/transformObjectToArray.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/transformObjectToArray.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/musor" beforeDir="false" afterPath="$PROJECT_DIR$/src/musor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/dataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/dataReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/profileReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/taskboard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/taskboard.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +75,7 @@
       <workItem from="1590687297712" duration="12518000" />
       <workItem from="1590785014089" duration="9089000" />
       <workItem from="1590945395643" duration="11273000" />
+      <workItem from="1591000159291" duration="10723000" />
     </task>
     <servers />
   </component>

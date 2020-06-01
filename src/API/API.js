@@ -1,19 +1,22 @@
 import axios from "axios";
 
-// const GET_IMG = "GET_IMG"
-// const ADD_IMG = "ADD_IMG"
-// const REMOVE_IMG = "REMOVE_IMG"
 
-
-export const axiosPost = (url, email) => {
-    const note = {
+export const addPhoto = (url, email) => {
+    let item = {
         url, date: new Date().toJSON(), email
     }
-   return axios.post(`https://react04-1e54b.firebaseio.com/photos.json`, note)
+   return axios.post(`https://react04-1e54b.firebaseio.com/photos.json`, item)
 
 }
 
-export const axiosGet = () => {
+export const addUser = (email, displayName = null, photoURL = null) => {
+    let user = {
+        email, displayName, photoURL
+    }
+    return axios.post(`https://react04-1e54b.firebaseio.com/users.json`, user)
+}
+
+export const getPhotos = () => {
     return axios.get(`https://react04-1e54b.firebaseio.com/photos.json`)
         .then(response => response.data)
 }

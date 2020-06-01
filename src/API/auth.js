@@ -1,4 +1,3 @@
-
 import firebase from "firebase";
 
 const firebaseConfig = {
@@ -24,7 +23,9 @@ export function authWithEmailAndPassword(email, password) {
 
 export const createUserWithEmailAndPassword = (email, password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(response => response)
+        .then(response => {
+            return response
+        })
 }
 
 
@@ -43,7 +44,6 @@ export const getUser = () => {
     return firebase.auth().currentUser
 }
 
-export const user = firebase.auth().currentUser;
 
 
 
