@@ -17,7 +17,6 @@ const Main = ({modalPhoto, auth, images, username, userPhoto, email, openCloseMo
         setSrc(e.target.src || e.target.firstChild.src)
         openCloseModalPhoto()
     }
-
     useEffect(() => {
         getArrData()
     }, [])
@@ -32,7 +31,7 @@ const Main = ({modalPhoto, auth, images, username, userPhoto, email, openCloseMo
             {images
                 ? <div className={s.main}>
                     {images.map(photo => <div onClick={openModalPhoto} key={photo.key}
-                                           className={s.block_img}><img src={photo.url} id={photo.id} alt={"#"}
+                                           className={s.block_img}><img src={photo.photoURL} id={photo.id} alt={"#"}
                     /></div>)}
                 </div>
                 : null}

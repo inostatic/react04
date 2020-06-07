@@ -2,20 +2,21 @@ import React, {useEffect, useState} from "react"
 import s from "./profile.module.scss"
 import {connect} from "react-redux"
 import {setProfile} from "../../actions/thunk"
+import {SET_DISPLAY_NAME, SET_PHOTO_URL} from "../../constants/const";
 
 
-const Profile = ({displayName, photoURL, setProfile}) => {
+const Profile = ({displayName, photoURL, email, setProfile}) => {
     let [dispName, setDispName] = useState(null)
     let [phURL, setPhUrl] = useState(null)
 
 
     const updateProfile = (type) => {
         switch (type) {
-            case 'dn':
-                if (dispName) setProfile(type, dispName)
+            case SET_DISPLAY_NAME:
+                if (dispName) setProfile(type, {dispName, email})
             break
-            case 'pu':
-                if (phURL) setProfile(type, phURL)
+            case SET_PHOTO_URL:
+                if (phURL) setProfile(type, {phURL, email})
             break
         }
     }
@@ -28,13 +29,13 @@ const Profile = ({displayName, photoURL, setProfile}) => {
                        value={dispName != null ? dispName : displayName || ''}
                        onChange={(e) => setDispName(e.target.value)}
                 />
-                <button className={s.button}  onClick={() => updateProfile('dn')}>Изменить</button>
+                <button className={s.button}  onClick={() => updateProfile(SET_DISPLAY_NAME)}>Изменить</button>
             </div>
             <label >Аватар пользователя: </label>
             <div>
                 <input type="text" className={s.input} value={phURL != null ? phURL : photoURL || '' }
                        onChange={(e) => setPhUrl(e.target.value)}/>
-                <button className={s.button}  onClick={() => updateProfile('pu')}>Изменить</button>
+                <button className={s.button}  onClick={() => updateProfile(SET_PHOTO_URL)}>Изменить</button>
             </div>
         </div>
     )
@@ -44,7 +45,8 @@ const Profile = ({displayName, photoURL, setProfile}) => {
 let mapStateToProps = (state) => {
     return {
         displayName: state.authReducer.displayName,
-        photoURL: state.authReducer.photoURL
+        photoURL: state.authReducer.photoURL,
+        email: state.authReducer.email
     }
 }
 

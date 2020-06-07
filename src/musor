@@ -393,3 +393,15 @@
             {/*    onChange={(e) => setPhNum(e.target.value)} />*/}
             {/*    <button className={s.button}  onClick={() => updateProfile('pn')}>Изменить</button>*/}
             {/*</div>*/}
+
+
+            // export const addPhoto = async (photoURL, email) => {
+            //     firebase.database().ref('photos/' + randomID()).set({
+            //         email, photoURL,
+            //         date: new Date().toJSON()
+            //     }).catch(e => console.log('addPhoto Error:', e))
+            // }
+
+            function randomID () {
+                return  '-' + Math.random().toString(36).substr(2, 11)
+            }

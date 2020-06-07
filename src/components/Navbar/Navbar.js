@@ -20,7 +20,7 @@ const Navbar = ({auth, modalAuth, openCloseModalAuth, createUser, signIn, signOu
                 {
                      auth
                         ? <>
-                             <NavLink className={s.nav} to="/">Моя страница</NavLink>
+                             <NavLink className={s.nav} to="/">Главная</NavLink>
                              <NavLink className={s.nav} to="profile">Профиль</NavLink>
                              <button className={s.btn} onClick={signOut}>Выйти</button>
                          </>

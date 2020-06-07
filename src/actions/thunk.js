@@ -1,6 +1,8 @@
-import firebase from "firebase";
-import {addUser, getPhotos} from "../API/API";
-import {authWithEmailAndPassword, createUserWithEmailAndPassword, getUser, outFirebase} from "../API/auth";
+import firebase from "firebase/app";
+import 'firebase/auth'
+
+import {addUser, changeDisplayName, changePhotoUrl, getPhotos} from "../API/API";
+import {authWithEmailAndPassword, createUserWithEmailAndPassword, getUser, outFirebase} from "../API/API";
 import {
     openCloseModalAuth,
     renderAfterInputAuth,
@@ -10,18 +12,17 @@ import {
     setPhotoURL
 } from "./actions";
 import {transformObjectToArray} from "../functions/transformObjectToArray";
+import {SET_DISPLAY_NAME, SET_PHOTO_URL} from "../constants/const";
 
 
 
 export const createUser = (email, password) => {
     return  (dispatch) => {
-        createUserWithEmailAndPassword(email, password).then((response) => {
-            debugger
-            // addUser(email).then()
-            dispatch(renderAfterInputAuth(response))
-
+        createUserWithEmailAndPassword(email, password).then(data => {
+            addUser(email)
+            dispatch(renderAfterInputAuth(data))
+            dispatch(openCloseModalAuth())
         })
-
     }
 }
 
@@ -65,22 +66,23 @@ export const getArrData = () => {
 
 export const setProfile = (type, payload) => {
     let user = getUser()
-    console.log(user)
     switch (type) {
-        case 'dn' : {
+        case SET_DISPLAY_NAME : {
             return (dispatch) => {
-                user.updateProfile({displayName: payload})
+                user.updateProfile({displayName: payload.dispName})
                     .then(() => {
-                        dispatch(setDisplayName(payload))
+                        changeDisplayName(payload.email, payload.dispName)
+                        dispatch(setDisplayName(payload.dispName))
                     })
                     .catch(err => console.log(err))
             }
         }
-        case  'pu' : {
+        case  SET_PHOTO_URL : {
             return (dispatch) => {
-                user.updateProfile({photoURL: payload})
+                user.updateProfile({photoURL: payload.phURL})
                     .then(() => {
-                        dispatch(setPhotoURL(payload))
+                        changePhotoUrl(payload.email, payload.phURL)
+                        dispatch(setPhotoURL(payload.phURL))
                     })
                     .catch(err => console.log(err))
             }
