@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 import 'firebase/auth'
 
-import {addUser, changeDisplayName, changePhotoUrl, getPhotos} from "../API/API";
+import {addUser, changeDisplayName, changePhotoUrl, getAuthor, getPhotos} from "../API/API";
 import {authWithEmailAndPassword, createUserWithEmailAndPassword, getUser, outFirebase} from "../API/API";
 import {
     openCloseModalAuth,
@@ -13,6 +13,7 @@ import {
 } from "./actions";
 import {transformObjectToArray} from "../functions/transformObjectToArray";
 import {SET_DISPLAY_NAME, SET_PHOTO_URL} from "../constants/const";
+import {pushAuthorData} from "../functions/pushAuthorData";
 
 
 
@@ -58,7 +59,9 @@ export const checkAuth = () => {
 export const getArrData = () => {
     return (dispatch) => {
         getPhotos().then(data => {
-            dispatch(setImage(transformObjectToArray(data)))
+            getAuthor().then(users => {
+                dispatch(setImage(pushAuthorData(transformObjectToArray(data), users)))
+            })
         })
     }
 }

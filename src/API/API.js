@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import 'firebase/auth'
 import 'firebase/database'
+import {getDate} from "../functions/getDate";
 
 
 firebase.initializeApp({
@@ -41,14 +42,14 @@ export const getUser = () => {
 export const addPhoto = async (photoURL, email) => {
     firebase.database().ref(`photos`).push({
         email, photoURL,
-        date: new Date().toJSON()
+        date: getDate()
     }).catch(e => console.log('addPhoto Error:', e))
 }
 
 
-export const addUser = (email, displayName = '', photoURL = '') => {
+export const addUser = (email, displayName = '', AuthorPhotoURL = '') => {
     firebase.database().ref('users/' + emailReplace(email)).set({
-      displayName, photoURL
+      displayName, AuthorPhotoURL
     }).catch(e => console.log('addUser Error:', e))
 }
 
@@ -57,11 +58,16 @@ export const getPhotos = () => {
 
 }
 
+export const getAuthor = () => {
+    return firebase.database().ref('users').once('value').then(r => r.val())
+
+}
+
 export const changeDisplayName = (email, displayName) => {
     firebase.database().ref('users/' + emailReplace(email)).update({displayName}).catch((e => console.log(e)))
 }
 
-export const changePhotoUrl = (email, photoURL) => {
-    firebase.database().ref('users/' + emailReplace(email)).update({photoURL}).catch((e => console.log(e)))
+export const changePhotoUrl = (email, AuthorPhotoURL) => {
+    firebase.database().ref('users/' + emailReplace(email)).update({AuthorPhotoURL}).catch((e => console.log(e)))
 }
 

@@ -20,7 +20,7 @@ const Main = ({modalPhoto, auth, images, username, userPhoto, email, openCloseMo
     useEffect(() => {
         getArrData()
     }, [])
-
+    console.log(images)
     return (
         <>
             {auth
