@@ -2,7 +2,7 @@ import {
     INPUT_AUTH,
     OPEN_CLOSE_MODAL_AUTH,
     OPEN_CLOSE_MODAL_PHOTO,
-    OUTPUT_AUTH,
+    OUTPUT_AUTH, SET_COMMENT, SET_COMMENTS,
     SET_DATA, SET_DISPLAY_NAME, SET_PHOTO_URL,
 } from "../constants/const";
 
@@ -14,6 +14,8 @@ export const openCloseModalPhoto = () => ({type: OPEN_CLOSE_MODAL_PHOTO})
 export const setImage = (data) => ({type: SET_DATA, payload: data})
 export const setDisplayName = (DisplayName) => ({type: SET_DISPLAY_NAME, payload: DisplayName})
 export const setPhotoURL = (url) => ({type: SET_PHOTO_URL, payload: url})
+export const setComments = (payload) => ({type: SET_COMMENTS, payload})
+export const setComment = (payload) => ({type: SET_COMMENT, payload})
 
 
 

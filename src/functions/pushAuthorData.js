@@ -1,7 +1,6 @@
-function emailReplace(email) {
-    return email.replace(/\./g, '`')
-}
+
+import {replaceEmail} from './replaceEmail'
 
 export const pushAuthorData = (photos, users) => {
-    return  photos.map(item => Object.assign(item, users[emailReplace(item.email)]))
+    return  photos.map(item => Object.assign(item, users[replaceEmail(item.email)]))
 }

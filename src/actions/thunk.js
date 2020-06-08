@@ -1,12 +1,21 @@
 import firebase from "firebase/app";
 import 'firebase/auth'
 
-import {addUser, changeDisplayName, changePhotoUrl, getAuthor, getPhotos} from "../API/API";
+import {
+    addComment,
+    addUser,
+    changeDisplayName,
+    changePhotoUrl,
+    getAuthor,
+    getCommentAuthor,
+    getComments,
+    getPhotos
+} from "../API/API";
 import {authWithEmailAndPassword, createUserWithEmailAndPassword, getUser, outFirebase} from "../API/API";
 import {
     openCloseModalAuth,
     renderAfterInputAuth,
-    renderAfterOutputAuth,
+    renderAfterOutputAuth, setComment, setComments,
     setDisplayName,
     setImage,
     setPhotoURL
@@ -14,6 +23,7 @@ import {
 import {transformObjectToArray} from "../functions/transformObjectToArray";
 import {SET_DISPLAY_NAME, SET_PHOTO_URL} from "../constants/const";
 import {pushAuthorData} from "../functions/pushAuthorData";
+import {getDate} from "../functions/getDate";
 
 
 
@@ -53,7 +63,16 @@ export const checkAuth = () => {
     }
 }
 
-
+export const addCommentFirebase = (email, comment, comment_id) => {
+    return (dispatch) => {
+        getCommentAuthor(email).then(data => {
+            let date = getDate()
+            let displayName = data.displayName
+            addComment(comment, email, displayName, date, comment_id).catch(e => console.log(e))
+            dispatch(setComment({comment, email, date, displayName, comment_id}))
+        })
+    }
+}
 
 
 export const getArrData = () => {
@@ -66,6 +85,13 @@ export const getArrData = () => {
     }
 }
 
+export const getArrComments = () => {
+    return (dispatch) => {
+        getComments().then(data => {
+            dispatch(setComments(transformObjectToArray(data)))
+        })
+    }
+}
 
 export const setProfile = (type, payload) => {
     let user = getUser()

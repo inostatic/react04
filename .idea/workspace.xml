@@ -4,9 +4,15 @@
     <list default="true" id="3924c6c4-f77e-420f-94f7-7a254a18bc24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/API/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/thunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taskboard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/taskboard.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/modalPhoto.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/modalPhoto.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/const.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functions/pushAuthorData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/pushAuthorData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/musor" beforeDir="false" afterPath="$PROJECT_DIR$/src/musor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +33,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testfb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project\project-react\react04\src\functions" />
       <recent name="C:\project\project-react\react04\src\components\Modal\auth" />
       <recent name="C:\project\project-react\react04\src\reducers" />
       <recent name="C:\project\project-react\react04\src\store" />
@@ -73,6 +80,7 @@
       <workItem from="1591117956165" duration="10881000" />
       <workItem from="1591459808139" duration="118000" />
       <workItem from="1591460893751" duration="17892000" />
+      <workItem from="1591640449156" duration="9981000" />
     </task>
     <servers />
   </component>
@@ -80,10 +88,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="736" y="328" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589574816358">
+    <state x="736" y="328" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591645644667">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="736" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1589574816358" />
+    <state x="736" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1591645644667" />
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590962991296">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -97,10 +105,10 @@
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-89.1920.1040@0.0.1920.1040" timestamp="1591613110576" />
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1591459924469" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1589392974943">
+    <state x="616" y="243" key="run.anything.popup" timestamp="1591647569207">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1589392974943" />
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1591647569207" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588859220512">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
