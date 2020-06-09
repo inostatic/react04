@@ -73,6 +73,7 @@ export const ModalPhoto = ({
         }
     }
 
+
     const leftSlide = () => {
         if (id === 0) {
             setPhotoSrc(images[countImg].photoURL)
@@ -130,7 +131,7 @@ export const ModalPhoto = ({
                                         <div className={s.comment_date}>{comment.date}</div>
                                     </div>
                                     <div className={s.com_text_block}>
-                                        <div className={s.com_circle}></div>
+                                        <img className={s.com_circle} ></img>
                                         <div className={s.comment_text}>{comment.comment}</div>
                                     </div>
                                 </div>

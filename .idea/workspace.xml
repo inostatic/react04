@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3924c6c4-f77e-420f-94f7-7a254a18bc24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/thunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/thunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/modalPhoto.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/modalPhoto.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/const.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functions/pushAuthorData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/pushAuthorData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/musor" beforeDir="false" afterPath="$PROJECT_DIR$/src/musor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +72,8 @@
       <workItem from="1591117956165" duration="10881000" />
       <workItem from="1591459808139" duration="118000" />
       <workItem from="1591460893751" duration="17892000" />
-      <workItem from="1591640449156" duration="9981000" />
+      <workItem from="1591640449156" duration="11551000" />
+      <workItem from="1591726646397" duration="2056000" />
     </task>
     <servers />
   </component>

@@ -34,7 +34,7 @@ const Main = ({modalPhoto, auth, images, email, openCloseModalPhoto, getArrData,
             result = comments.filter(item => item.comment_id === target)
         }
         if (result.length === 0) {
-            result.push({comment: "no comments", comment_id: "0", date: "", displayName: "", email: ""})
+            result.push({comment: "no comments", comment_id: "0", date: "", displayName: "", email: "", key: "default"})
         }
         setPhotoComment(result)
         openCloseModalPhoto()
