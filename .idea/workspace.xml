@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3924c6c4-f77e-420f-94f7-7a254a18bc24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/main.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/ModalPhoto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/photo/modalPhoto.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/photo/modalPhoto.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +77,15 @@
       <workItem from="1591459808139" duration="118000" />
       <workItem from="1591460893751" duration="17892000" />
       <workItem from="1591640449156" duration="11551000" />
-      <workItem from="1591726646397" duration="2056000" />
+      <workItem from="1591726646397" duration="2877000" />
+      <workItem from="1592148136404" duration="126000" />
+      <workItem from="1592240992299" duration="6874000" />
+      <workItem from="1592426860235" duration="664000" />
+      <workItem from="1592840156482" duration="20000" />
+      <workItem from="1592858424232" duration="33000" />
+      <workItem from="1598193335523" duration="1767000" />
+      <workItem from="1598650406746" duration="1910000" />
+      <workItem from="1598766414131" duration="1119000" />
     </task>
     <servers />
   </component>
@@ -93,11 +105,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="594" y="303" key="EditFileWatcherDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1589632220566" />
-    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1591613110576">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1592840174202">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040/-1920.-89.1920.1040@0.0.1920.1040" timestamp="1591613110576" />
-    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1591459924469" />
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1592840174202" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1592148195233">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1592148195233" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1591647569207">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

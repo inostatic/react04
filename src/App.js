@@ -1,5 +1,4 @@
 import React from "react";
-import './App.scss';
 import {NavbarContainer} from "./components/Navbar/Navbar";
 import {MainContainer} from "./components/Main/Main";
 import {Profile, ProfileContainer} from "./components/Profile/Profile";

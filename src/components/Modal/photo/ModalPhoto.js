@@ -8,24 +8,36 @@ export const ModalPhoto = ({
                                userPhoto, date,
                                getArrComments, comments,
                                email, addCommentFirebase,
-                               photoKey, photoComment}) =>
+                               photoKey,
+                               photoComment
+}) =>
 {
 
     let countImg = images.length - 1
-    let [photoDate, setPhotoDate] = useState(date)
-    let [userName, setUserName] = useState(username)
-    let [userPhotoUrl, setUserPhotoUrl] = useState(userPhoto)
-    let [id, setId] = useState(Number(photoId))
-    let [comment_id, setComment_id] = useState(photoKey)
-    let [photoSrc, setPhotoSrc] = useState(src)
-    let [sliders, setSliders] = useState(getSliders())
-    let [comment, setComment] = useState('')
-    let [displayComment, setDisplayComment] = useState(photoComment)
+    const [photoDate, setPhotoDate] = useState(date)
+    const [userName, setUserName] = useState(username)
+    const [userPhotoUrl, setUserPhotoUrl] = useState(userPhoto)
+    const [id, setId] = useState(Number(photoId))
+    const [comment_id, setComment_id] = useState(photoKey)
+    const [photoSrc, setPhotoSrc] = useState(src)
+    const [sliders, setSliders] = useState(getSliders())
+    const [comment, setComment] = useState('')
+    const [displayComment, setDisplayComment] = useState([{comment: "no comments", comment_id: "0", date: "", displayName: "", email: "", key: "default"}])
 
     useEffect(() => {
         getArrComments()
     }, [])
 
+    useEffect(() => {
+        if (comments) {
+            let result
+            if(comments.length > 0) {
+                    result = comments.filter(item => item.comment_id === photoKey)
+                    setDisplayComment(result)
+                }
+             // result.length ? setDisplayComment(result) : ''
+        }
+    }, [comments])
 
     function getSliders() {
         if (photoId < countImg - 5) {

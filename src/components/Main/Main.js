@@ -9,14 +9,17 @@ import {addCommentFirebase, getArrComments, getArrData} from "../../actions/thun
 
 
 const Main = ({modalPhoto, auth, images, email, openCloseModalPhoto, getArrData, getArrComments, comments, addCommentFirebase}) => {
-    let [photoId, setPhotoId] = useState('')
-    let [src, setSrc] = useState('')
-    let [username, setUsername] = useState('')
-    let [userPhoto, setUserPhoto] = useState('')
-    let [date, setDate] = useState('')
-    let [photoKey, SetPhotoKey] = useState('')
-    let [photoComment, setPhotoComment] = useState('')
+    const [photoId, setPhotoId] = useState('')
+    const [src, setSrc] = useState('')
+    const [username, setUsername] = useState('')
+    const [userPhoto, setUserPhoto] = useState('')
+    const [date, setDate] = useState('')
+    const [photoKey, SetPhotoKey] = useState('')
+    const [photoComment, setPhotoComment] = useState('')
 
+    useEffect(() => {
+        getArrData()
+    }, [])
     useEffect(() => {
         getArrComments()
     }, [])
@@ -39,9 +42,7 @@ const Main = ({modalPhoto, auth, images, email, openCloseModalPhoto, getArrData,
         setPhotoComment(result)
         openCloseModalPhoto()
     }
-    useEffect(() => {
-        getArrData()
-    }, [])
+
 
 
 
